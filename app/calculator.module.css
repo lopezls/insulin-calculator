@@ -1,0 +1,143 @@
+.page {
+  --bg: #f4f7fb;
+  --card: #fff;
+  --text: #1c2733;
+  --muted: #5d6b7a;
+  --accent: #1769aa;
+  --border: #d5dde6;
+  --warn: #fff6e0;
+  --warn-border: #f0dca0;
+  --warn-text: #4a3b00;
+  --err: #b00020;
+  --input-bg: #fff;
+
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --bg: #12171d;
+    --card: #1b232c;
+    --text: #e8eef4;
+    --muted: #9aa8b6;
+    --accent: #6bb6ee;
+    --border: #2f3b47;
+    --warn: #2c2610;
+    --warn-border: #4a4020;
+    --warn-text: #f0dca0;
+    --err: #ff8a80;
+    --input-bg: #12171d;
+  }
+}
+
+.page * {
+  box-sizing: border-box;
+}
+
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.sub {
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin: 12px 0 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text);
+}
+
+.modes .radio {
+  display: inline-block;
+  font-weight: 500;
+  margin: 0 16px 0 0;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.row > div {
+  flex: 1 1 140px;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.stat {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.n {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.l {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.x {
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.err {
+  color: var(--err);
+  font-weight: 600;
+}
+
+.note {
+  background: var(--warn);
+  border: 1px solid var(--warn-border);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.85rem;
+  color: var(--warn-text);
+}
